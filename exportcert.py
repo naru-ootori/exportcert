@@ -40,6 +40,7 @@ run(export_cl)
 sn_file = package_id + '_SN.txt'
 run('openssl x509 -noout -serial -in {0} > {1}' \
                .format(cert_file, sn_file), shell=True)
+               
 tp_file = package_id + '_TP.txt'
 run('openssl x509 -noout -fingerprint -sha1 -inform pem -in {0} > {1}' \
                .format(cert_file, tp_file), shell=True)
